@@ -1,8 +1,11 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel_slider/carousel_slider.dart';
+import 'package:gablejob/animatedWidget/animated_widget_horz.dart';
+import 'package:gablejob/animatedWidget/animated_widget_vert.dart';
+import 'package:gablejob/profile_slider.dart';
 import 'drawer/navbar.dart';
+import 'package:gablejob/card_slider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -2817,7 +2820,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: const BorderRadius.all(
                                             Radius.circular(15))),
                                     child: Image(
-                                      image: AssetImage('assets/logos/cv.png'),
+                                      image: const AssetImage(
+                                          'assets/logos/cv.png'),
                                       color: Colors.lightGreen.shade800,
                                     )),
                                 const SizedBox(
@@ -2849,7 +2853,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: const BorderRadius.all(
                                             Radius.circular(15))),
                                     child: Image(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/logos/company.png'),
                                       color: Colors.lightGreen.shade800,
                                     )),
@@ -2890,7 +2894,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: const BorderRadius.all(
                                             Radius.circular(15))),
                                     child: Image(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/logos/nocharge.png'),
                                       color: Colors.lightGreen.shade800,
                                     )),
@@ -2912,7 +2916,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           Container(
                             height: 60,
                             width: 195,
-                            margin: EdgeInsets.only(right: 12),
+                            margin: const EdgeInsets.only(right: 12),
                             child: Row(
                               children: [
                                 Container(
@@ -2924,7 +2928,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         borderRadius: const BorderRadius.all(
                                             Radius.circular(15))),
                                     child: Image(
-                                      image: AssetImage(
+                                      image: const AssetImage(
                                           'assets/logos/threepeople.png'),
                                       color: Colors.lightGreen.shade800,
                                     )),
@@ -2956,93 +2960,105 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   color: Colors.transparent,
                   width: double.infinity,
-                  height: 400,
+                  height: 381,
                   child: Column(
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         'Popular Companies',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
+                      Flexible(
+                        child: CardSlider(),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 25,
+                ),
+                Container(
+                  color: Colors.white,
+                  width: double.infinity,
+                  height: 450,
+                  child: Column(
+                    children: const [
                       SizedBox(
-                        height: 330,
-                        child: CarouselSlider.builder(
-                          slideBuilder: (index) {
-                            return Card(
-                              color: Colors.white,
-                              margin: const EdgeInsets.all(30),
-                              elevation: 2,
-                              child: Column(
-                                children: [
-                                  const SizedBox(height: 30,),
-                                  const SizedBox(
-                                    height: 70,
-                                    width: 70,
-                                    child: Image(
-                                        image: AssetImage('assets/logos/opera.png')),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  const Text(
-                                    'Infiniza.com',
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 15,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        child: Icon(
-                                          Icons.location_on,
-                                          size: 20,
-                                          color: Colors.black.withOpacity(0.4),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        width: 5,
-                                      ),
-                                      Text(
-                                        'North Street, California',
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            color: Colors.black.withOpacity(0.4)),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 15,),
-                                  SizedBox(
-                                    height: 50,
-                                    width: 80,
-                                    child: OutlinedButton(
-                                      onPressed: () {},
-                                      style: ButtonStyle(
-                                          shape: MaterialStateProperty.all(
-                                              const RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.zero)),
-                                          side: MaterialStateProperty.all(const BorderSide(
-                                            color: Colors.green,
-                                          )),
-                                          padding: MaterialStateProperty.all(
-                                              const EdgeInsets.all(10))),
-                                      child: const Text(
-                                        'Hiring',
-                                        style: TextStyle(color: Colors.black),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(height: 30,),
-                                ],
-                              ),
-                            );
-                          },
-                          itemCount: 9,
+                        height: 25,
+                      ),
+                      Text(
+                        'Featured Profile',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Flexible(
+                        fit: FlexFit.loose,
+                        child: ProfileSlider(),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Container(
+                  height: 1250,
+                  width: double.infinity,
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SizedBox(height: 480, width: 420, child: AnimateCont()),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(height: 480, width: 400, child: AnimateCont2()),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        'Download The Glabe Mobile App',
+                        style: TextStyle(
+                            fontSize: 19,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 25),
+                        child: const Text(
+                          'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Image(
+                              image: AssetImage('assets/logos/appstore.png'),
+                              width: 150,
+                              height: 60,
+                            ),
+                            Image(
+                              image: AssetImage('assets/logos/googleplay.png'),
+                              width: 150,
+                              height: 60,
+                            )
+                          ],
                         ),
                       )
                     ],
