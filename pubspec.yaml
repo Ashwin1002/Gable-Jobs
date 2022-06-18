@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_carousel_slider: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,27 @@ flutter:
     - assets/images/register.png
     - assets/images/phonecall.png
     - assets/images/cv.png
+    - assets/images/menwomen.png
+    - assets/images/officetalk.jpg
+    - assets/images/womensmile.png
+    - assets/logos/Bizotic.png
+    - assets/logos/Glovibo.png
+    - assets/logos/Gozuto.png
+    - assets/logos/Hotelzo.png
+    - assets/logos/Infiniza.png
+    - assets/logos/udiza.png
+    - assets/logos/quota.png
+    - assets/logos/company.png
+    - assets/logos/job.png
+    - assets/logos/cv.png
+    - assets/logos/nocharge.png
+    - assets/logos/star.png
+    - assets/logos/opera.png
+    - assets/logos/horse.png
+    - assets/logos/threepeople.png
+    - assets/images/blackguy.png
+    - assets/images/friends.png
+    - assets/images/collegue.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
