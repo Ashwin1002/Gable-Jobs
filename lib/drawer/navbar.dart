@@ -9,19 +9,35 @@ class navbar extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const SizedBox(
-              height: 105,
-              child: const DrawerHeader(
-                child: Text(
-                  'Side menu',
-                  style: TextStyle(color: Colors.white),
-                  textAlign: TextAlign.center,
-                ),
-                decoration: BoxDecoration(
+            SizedBox(
+              height: 120,
+              child: DrawerHeader(
+                decoration: const BoxDecoration(
                   color: Colors.green,
                 ),
                 margin: EdgeInsets.zero,
                 padding: EdgeInsets.zero,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: 60,
+                        width: 80,
+                        child: const Image(image: const AssetImage('assets/logos/gable.png')),
+                      ),
+                      const Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          'Gable Jobs',
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
             ExpansionTile(
@@ -235,7 +251,7 @@ class navbar extends StatelessWidget {
               leading: Icon(Icons.add_box_outlined),
               title: Text('Login'),
             ),
-            Divider(),
+            const Divider(),
             const ListTile(
               leading: Icon(Icons.person),
               title: Text('Sign Up'),
