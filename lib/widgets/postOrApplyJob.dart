@@ -16,8 +16,8 @@ class JobPortal extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    height: 240,
-                    width: 190,
+                    height: 260,
+                    width: 200,
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
@@ -25,10 +25,10 @@ class JobPortal extends StatelessWidget {
                             fit: BoxFit.fill)),
                   ),
                   Container(
-                    height: 140,
-                    width: 120,
+                    height: 145,
+                    width: 140,
                     padding: EdgeInsets.zero,
-                    margin: const EdgeInsets.only(left: 210),
+                    margin: const EdgeInsets.only(left: 220),
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
@@ -39,9 +39,11 @@ class JobPortal extends StatelessWidget {
                     height: 60,
                     width: MediaQuery.of(context).size.width * 0.6,
                     padding: const EdgeInsets.all(10.0),
-                    margin: const EdgeInsets.only(top: 155, left: 105),
+                    margin: const EdgeInsets.only(top: 160, left: 105),
                     decoration: BoxDecoration(
-                      color: Colors.green,
+                      gradient: LinearGradient(
+                        colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                      ),
                       border: Border.all(
                           color: Colors.white.withOpacity(0.5),
                           width: 8),
@@ -129,19 +131,13 @@ class JobPortal extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                      ),
+                    ),
+                    child: TextButton(
                       onPressed: () {},
-                      style: ButtonStyle(
-                          shape: MaterialStateProperty.all(
-                              const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.zero)),
-                          side: MaterialStateProperty.all(
-                              const BorderSide(
-                                color: Colors.green,
-                              )),
-                          padding: MaterialStateProperty.all(
-                              const EdgeInsets.all(12))),
                       child: Row(
                         children: [
                           Text(

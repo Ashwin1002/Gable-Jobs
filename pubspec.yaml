@@ -47,6 +47,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   scrolling_page_indicator: ^0.1.3
   carousel_slider: ^4.1.1
+  flutter_switch: ^0.3.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -116,6 +117,7 @@ flutter:
     - assets/logos/money.gif
     - assets/logos/gable.png
     - assets/logos/social.png
+    - assets/logos/buttontotop.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

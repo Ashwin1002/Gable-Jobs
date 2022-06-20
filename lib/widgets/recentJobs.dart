@@ -40,7 +40,9 @@ class RecentJobs extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             top: 8, left: 15, right: 15, bottom: 8),
                         decoration: const BoxDecoration(
-                          color: Colors.green,
+                          gradient: LinearGradient(
+                            colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                          ),
                           borderRadius: BorderRadius.zero,
                         ),
                         child: const Text(
@@ -275,21 +277,16 @@ class RecentJobs extends StatelessWidget {
                       height: 8,
                     ),
                     Container(
-                      height: 30,
+                      height: 35,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all(
-                                const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.zero)),
-                            side: MaterialStateProperty.all(
-                                const BorderSide(
-                                  color: Colors.green,
-                                )),
-                            padding: MaterialStateProperty.all(
-                                const EdgeInsets.all(5))),
                         child: Text(
                           'Full Time',
                           style: TextStyle(
@@ -445,10 +442,15 @@ class RecentJobs extends StatelessWidget {
                       height: 8,
                     ),
                     Container(
-                      height: 30,
+                      height: 35,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all(
@@ -618,7 +620,12 @@ class RecentJobs extends StatelessWidget {
                       height: 30,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all(
@@ -788,7 +795,12 @@ class RecentJobs extends StatelessWidget {
                       height: 30,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all(
@@ -958,7 +970,12 @@ class RecentJobs extends StatelessWidget {
                       height: 30,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all(
@@ -1128,7 +1145,12 @@ class RecentJobs extends StatelessWidget {
                       height: 30,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all(
@@ -1298,7 +1320,12 @@ class RecentJobs extends StatelessWidget {
                       height: 30,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all(
@@ -1468,7 +1495,12 @@ class RecentJobs extends StatelessWidget {
                       height: 30,
                       width: 80,
                       padding: EdgeInsets.zero,
-                      child: ElevatedButton(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                        ),
+                      ),
+                      child: TextButton(
                         onPressed: () {},
                         style: ButtonStyle(
                             shape: MaterialStateProperty.all(
@@ -1520,7 +1552,9 @@ class RecentJobs extends StatelessWidget {
               height: 35,
               padding: const EdgeInsets.only(top: 10),
               decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.3),
+                  gradient: LinearGradient(
+                    colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 63)],
+                  ),
                   shape: BoxShape.circle),
               child: const Text(
                 '1',

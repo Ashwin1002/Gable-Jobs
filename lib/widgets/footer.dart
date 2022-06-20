@@ -9,7 +9,11 @@ class Footer extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          color: Colors.green,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+            ),
+          ),
           padding: EdgeInsets.only(left: 12),
           margin: EdgeInsets.only(top: 150),
           child: Column(

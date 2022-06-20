@@ -9,7 +9,11 @@ class ThreeButton extends StatelessWidget {
     return Container(
       height: 240,
       width: double.infinity,
-      color: Colors.green,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(30, 30, 30, 20),
         child: Row(
@@ -34,7 +38,7 @@ class ThreeButton extends StatelessWidget {
                   const Text(
                     'Register Your Account',
                     style: TextStyle(
-                        color: Colors.white, fontSize: 12),
+                        color: Colors.white, fontSize: 14),
                     textAlign: TextAlign.center,
                   )
                 ],
@@ -63,7 +67,7 @@ class ThreeButton extends StatelessWidget {
                     const Text(
                       'Apply for Dream Job',
                       style: const TextStyle(
-                          color: Colors.white, fontSize: 12),
+                          color: Colors.white, fontSize: 14),
                       textAlign: TextAlign.center,
                     )
                   ],
@@ -89,7 +93,7 @@ class ThreeButton extends StatelessWidget {
                   const Text(
                     'Upload Your Resume',
                     style: TextStyle(
-                        color: Colors.white, fontSize: 12),
+                        color: Colors.white, fontSize: 14),
                     textAlign: TextAlign.center,
                   )
                 ],

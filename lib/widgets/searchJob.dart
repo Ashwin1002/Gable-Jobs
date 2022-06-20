@@ -160,14 +160,14 @@ class _SearchWidgetState extends State<SearchWidget> {
                 Container(
                   width: double.infinity,
                   height: 50,
-                  child: ElevatedButton(
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                      ),
+                    borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: TextButton(
                     onPressed: () {},
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                              borderRadius:
-                              BorderRadius.circular(30))),
-                    ),
                     child: const Text(
                       'Search',
                       style: TextStyle(color: Colors.white),

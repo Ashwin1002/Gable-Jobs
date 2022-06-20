@@ -8,7 +8,11 @@ class AvailableJob extends StatelessWidget {
     return Container(
       height: 340,
       width: double.infinity,
-      color: Colors.green,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+        ),
+      ),
       child: Column(
         children: [
           Container(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class navbar extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -13,7 +14,9 @@ class navbar extends StatelessWidget {
               height: 120,
               child: DrawerHeader(
                 decoration: const BoxDecoration(
-                  color: Colors.green,
+                  gradient: LinearGradient(
+                    colors: [Color.fromRGBO(56, 167, 69, 1), Color.fromRGBO(76, 206, 91, 1)],
+                  ),
                 ),
                 margin: EdgeInsets.zero,
                 padding: EdgeInsets.zero,
